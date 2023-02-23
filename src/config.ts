@@ -1,6 +1,6 @@
 export default {
   // 填入你的OPENAI_API_KEY
-  OPENAI_API_KEY: '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',
+  OPENAI_API_KEY: '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',
   // 设置获取消息的重试次数
   retryTimes: 3,
   // 在群组中设置唤醒微信机器人的关键词
