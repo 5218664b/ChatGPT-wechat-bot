@@ -25,5 +25,5 @@ RUN apt-get update \
 
 ADD . /code
 
-RUN npm run build
+RUN npm run dev
 CMD ["node", "lib/bundle.esm.js"]
