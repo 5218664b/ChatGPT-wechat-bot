@@ -25,5 +25,6 @@ RUN apt-get update \
 
 ADD . /code
 
-RUN npm run dev
-CMD ["node", "lib/bundle.esm.js"]
+#RUN npm run dev
+CMD xvfb-run --server-args="-screen 0 1280x800x24 -ac -nolisten tcp -dpi 96 +extension RANDR" npm run dev
+#CMD ["node", "lib/bundle.esm.js"]
