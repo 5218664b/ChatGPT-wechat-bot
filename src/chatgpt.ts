@@ -4,12 +4,13 @@ import { retryRequest } from './utils.js';
 import * as dotenv from "dotenv";
 dotenv.config();
 
-let chatGPTApiKey = process.env.CHAT_GPT_API_KEY;
+let configFile: any = {};
+configFile={key:process.env.CHAT_GPT_API_KEY};
 let chatGPT: any = {};
 let chatOption = {};
 export function initChatGPT() {
   chatGPT = new ChatGPTAPI({
-    apiKey: chatGPTApiKey,
+    apiKey: configFile.key,
     // completionParams: {
     //   model: 'text-chat-davinci-002-sh-alpha-aoruigiofdj83',
     // },
