@@ -1,6 +1,8 @@
 import { ChatGPTAPI } from 'chatgpt';
 import config from './config.js';
 import { retryRequest } from './utils.js';
+import * as dotenv from "dotenv";
+dotenv.config();
 
 let chatGPT: any = {};
 let chatOption = {};
@@ -12,6 +14,7 @@ export function initChatGPT() {
     // },
   });
 }
+dotenv.config();
 
 async function getChatGPTReply(content, contactId) {
   const { conversationId, text, id } = await chatGPT.sendMessage(
